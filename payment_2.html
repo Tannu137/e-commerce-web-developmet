@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form Validaton </title>
+	<style>
+	body
+	{
+       background-color:white;
+       background-image: url(.png);
+       background-repeat: no-repeat;
+       background-size: 100%;
+	}
+	.box
+	{
+	width: 420px;
+	height: 320px;
+	background-color: #009999;
+	color: #fff;
+	top: 47%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 30px 20px;
+	margin-bottom: 10px;
+ 	}
+    p
+    {
+    font-size: 300%;
+ 	color:black;
+ 	margin-top: auto;
+ 	font-style:normal;
+ 	text-align: center;
+ 	font-family: The times roman Georgia;
+    }
+
+	</style>
+	
+</head>
+<body>
+	<p>MAKE YOUR PAYMENT</p>
+	<img src="payment_4.png">
+	<div class="box">
+	<center>
+	<form action="" name="myForm" onsubmit="return(validate())" method="post">
+
+		Choose Your Payment:
+		<select name="Payment" id="1">
+			<option value="-1">Choose here </option>
+			<option value="1">Debit</option>
+			<option value="2">Credit</option>
+		</select><br><br>
+		Choose Bank:-
+		<select name="Bank" id="2">
+           <option value="choose here">Choose here</option>
+           <option value="SBI">SBI</option>
+           <option value="PANJAB  BANK">PUNJAB  BANK</option>
+           <option value="ICICI BANK">ICICI BANK</option>
+           <option value="KOTAK BANK">KOTAK BANK</option>
+           <option value="BARUDA BANK">BARUDA  BANK</option>
+           <option value="JK BANK">JK BANK</option>
+           <option value="AXIS BANK">AXIS BANK</option>
+           <option value="CENTRAL BANK">CENTRAL BANK</option>
+        </select><br><br>
+Card No:<input type="number" name="Card" id="3"><br><br>
+		CVV Code:<input type="number" name="CVV" id="4"><br><br>
+		Expiry Date:<input type="text" name="Date" id="5"><br><br>
+		&nbsp&nbsp&nbsp
+		<input type="submit" value="Proceed To Pay">
+	</form>
+</center>
+</div>
+
+	<div>
+		<center>
+			<div style="color:#234568; font-size: 30px">654.879.7859 | 628.789.6354<br>
+				@ 2018 Online Shopping,Indian Limited Company
+			</div>
+		</center>
+		<center>
+		<img src="23.jpg" width="50px" height="50px">
+		<img src="24.jpg" width="50px" height="50px">
+		<img src="2.png" width="50px" height="50px">
+		<img src="5.png" width="50px" height="50px">
+		<img src="4.png" width="50px" height="50px">
+		</center>
+	</div>
+
+<script>
+	function validate()
+    {
+    	if (document.getElementById("1").value=="-1") 
+	    {
+	    	alert("please select your Card Choice");
+	    	return false;
+	    }
+	    if (document.getElementById("2").value=="") 
+	    {
+	    	alert("please select your BANK Name");
+	    	return false;
+	    }
+	     if (document.getElementById("3").value=="")
+	    {
+	    	alert("please provide Card number");
+	    	document.getElementById("3").focus();
+	    	return false;
+	    }
+	    a=document.getElementById("3").value
+	    if (a=="" || a.length !=16 || isNaN(a) )
+	    {
+	    	alert("please provide valid Card number");
+	    	document.getElementById("3").focus();
+	    	return false;
+	    }
+	     if (document.getElementById("4").value=="")
+	    {
+	    	alert("please provide CVV Code");
+	    	document.getElementById("4").focus();
+	    	return false;
+	    }
+	    x=document.getElementById("4").value
+	    if (x=="" || x.length!=3||isNaN(x) )
+	    {
+	    	alert("please provide valid CVV Code");
+	    	document.getElementById("4").focus();
+	    	return false;
+	    }
+	    if (document.getElementById("5").value=="")
+	    {
+	    	alert("please provide Expiry Date");
+	    	document.getElementById("5").focus();
+	    	return false;
+	    }
+	    return(true);
+	}
+</script>
+</body>
+</html>

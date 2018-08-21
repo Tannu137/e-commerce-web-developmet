@@ -1,0 +1,4 @@
+newsapi.org
+Install cors.
+cors origin resources::::
+ 

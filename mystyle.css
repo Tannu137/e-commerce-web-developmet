@@ -1,0 +1,63 @@
+         body
+	     {
+	     	background-color: #800000;
+	     }
+		.mydiv
+		{
+			float: left;
+			padding: 10px 20px 0px 0px;
+		}
+		.myimg
+		{
+			height: 400px;
+			width: 300px;
+			border:2px solid grey;
+			border-radius: 5px;
+		}
+		p
+		{
+          color: white;
+		}
+		.mybtn
+		{
+			height: 30px;
+		    width: 90px;
+		    text-align: center;
+		    background-color: green;
+		    color: white;
+		    border-radius: 5px;
+		}
+		ul
+		{
+			list-style-type: none;
+			margin: 0;
+			border-radius: 6px;
+			padding:0px;
+			overflow: hidden;
+			
+		}
+         li
+         {
+         	float: left;
+         	font-style: bold;
+         }
+         li a
+         {
+         	display: block;
+         	color: white;
+         	padding: 10px 15px;
+         	font-family: sans-serif;
+         	font-size: 18px;
+         	font-style: bold;
+         	text-decoration: none;
+         }
+         li a:hover
+         {
+         	text-decoration: underline;
+         	background-color: red;
+         }
+         .menu
+         {
+         	padding: 10px;
+         	background-color: black;
+         }

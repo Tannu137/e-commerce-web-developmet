@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> myshop </title>
+	 <style>
+	
+ 	p
+ 	{
+ 		    
+			font-style:italic;
+			font-weight: bold;
+			font-size: 20px;
+			color:#761804;
+		
+ 		
+ 	}
+ 	a
+		{
+			color:white;
+			font-size: 30px;
+			text-decoration: none;
+			padding-left: 20px;
+			float: center;
+		}
+		a:hover
+		{
+			color:#761804;
+		}
+ 	body
+ 	{
+ 		background-color: white;
+ 		background-image: url(log.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+ 	}
+ 	.box
+ 	{
+ 	width: 320px;
+	height: 350px;
+	background-color: silver;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 40px 30px;
+ 	}
+ 	.page
+ 	{
+ 		margin-top: 400px;
+ 		margin-left: 400px;
+ 	}
+ </style>
+</head>
+<body>
+    <br><br>
+    
+    
+	<p align="center" style="font-size: 40px" >WELCOME TO MYSHOP.COM</p><br>	
+	<div class="box">
+	<p style="font-size:px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Login</p>
+	<center> 
+	<form style="color: black" action="next.asp" name="myForm" onsubmit="return(validate())" method="post">	
+		E-Mail:<input type="text" name="E-Mail" id="1"><br><br>
+		Password:<input type="Password" name="Password" id="2"><br><br>
+		<input type="submit" value="Log in"><br><br><br>
+	 </form>
+     </center>
+     </div>
+     <div class="page">
+----------------------------------------New to Myshop----------------------------------------<br>	
+<a href="project_creat_acc.html" style="color: blue">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Create a new Account </a>	
+	</div>    
+<script>
+	function validate()
+    {
+    	if (document.getElementById("1").value=="") 
+	    {
+	    	alert("please provide your E-Mail id");
+	    	document.getElementById("1").focus();
+	    	return false;
+	    }
+	    if (document.getElementById("2").value=="") 
+	    {
+	    	alert("please Enter Password");
+	    	document.getElementById("2").focus();
+	    	return false;
+	    }
+	    return true;
+	    
+	}
+</script>
+</body>
+</html>

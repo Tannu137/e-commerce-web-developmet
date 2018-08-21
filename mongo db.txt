@@ -1,0 +1,17 @@
+*net short mongodb
+*server
+*mongo
+*show dbs 
+local 0.0.Gb
+*use training
+*createlocation"data"
+db.data{Name."Bhavesh", L Name:"Mali")};
+db.data.insert[{(Name:"Bhavesh",L Name:"Mali")}<{Name:"bvishal",/name:"Mali}];---multiple variable or data we can say.
+
+>db.data.find()
+objid= "_________________________"
+objid="__________________________"
+
+>db.data.find.pretty()
+
+

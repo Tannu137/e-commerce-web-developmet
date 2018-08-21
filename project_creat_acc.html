@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Form Validaton </title>
+<style>
+p
+{
+	font-size: 300%;
+ 	color:brown;
+ 	font-style: italic;
+}
+body
+{
+    background-color: white;
+    background-image: url(shopping.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.r
+{
+	margin-left: 60px;
+	color: black;
+}
+.e
+{
+	margin-left: 30px;
+}
+.h
+{
+	margin-left: 700px;
+}
+.t
+{
+	font-size: 20px;
+}
+
+</style>
+</head>
+<body>
+	
+
+	<p style="margin-left: 100px;">Fill Your Details</p>
+	<form class="r" action="next.asp" name="myForm" onsubmit="return(validate())" method="post">
+		<div class="t">
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Name:<input class="e" type="text" name="Name" id="1"><br><br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp E-Mail:<input class="e" type="text" name="E-Mail" id="2"><br><br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Contact No:<input class="e" type="number" name="Contact" id="3"><br><br>
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Password  :<input class="e" type="Password" name="Password" id="4"><br><br>
+         Confirm Password:<input class="e" type="Password" name="Password" id="5"><br><br>
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbspCountry:
+		<select name="Country" id="6">
+			<option value="-1">select your country </option>
+			<option value="1">USA</option>
+			<option value="2">UK</option>
+			<option value="3">INDIA</option>
+		</select><br><br>
+		<input style="margin-left: 70px" type="submit" value="submit">
+	</div>
+	</form>
+<script>
+	function validate()
+    {
+	   if (document.getElementById("1").value=="")
+	    {
+	    	alert("please provide your Name");
+	    	document.getElementById("1").focus();
+	    	return false;
+	    }
+	    if (document.getElementById("2").value=="")
+	    {
+	    	alert("please provide your E-Mail id");
+	    	document.getElementById("2").focus();
+	    	return false;
+	    }
+	     if (document.getElementById("3").value=="")
+	    {
+	    	alert("please provide your Mobile number");
+	    	document.getElementById("3").focus();
+	    	return false;
+	    }
+	    a=document.getElementById("3").value
+	    if (a=="" || a.length !=10 || isNaN(a) )
+	    {
+	    	alert("please provide valid phone number");
+	    	document.getElementById("3").focus();
+	    	return false;
+	    }
+	     if (document.getElementById("4").value=="")
+	    {
+	    	alert("please provide Password");
+	    	document.getElementById("4").focus();
+	    	return false;
+	    }
+	    a=document.getElementById("4").value
+	    b=document.getElementById("5").value
+        if (a=="" || a!=b)
+        {
+            alert("please enter same Password");
+            document.getElementById("5").focus();
+            return false;
+        }
+	    if (document.getElementById("6").value=="-1") 
+	    {
+	    	alert("please select your Countery");
+	    	return false;
+	    }
+	    return(true);
+	}
+</script>
+</body>
+</html>
